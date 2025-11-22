@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue'
 import { Toaster } from '@/components/ui/sonner'
 import { useUIStore } from '@/stores/ui'
+import { webhookService } from '@/services/webhook-service'
 import CodemirrorEditor from '@/views/CodemirrorEditor.vue'
 
 const uiStore = useUIStore()
@@ -14,6 +15,15 @@ onMounted(() => {
   isUtools.value = !!(window as any).__MD_UTOOLS__
   if (isUtools.value) {
     document.documentElement.classList.add(`is-utools`)
+  }
+
+  // 初始化 webhook 服务
+  try {
+    webhookService.initialize()
+    console.log('[App] Webhook 服务已初始化')
+    console.log('[App] 使用说明:', webhookService.getInstructions())
+  } catch (error) {
+    console.error('[App] Webhook 服务初始化失败:', error)
   }
 })
 </script>

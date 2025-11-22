@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { widthOptions } from '@md/shared/configs'
-import { FileCode, Monitor, Moon, Palette, PanelLeft, Smartphone, Sun } from 'lucide-vue-next'
+import { FileCode, Monitor, Moon, Palette, PanelLeft, Smartphone, Sun, Wifi, WifiOff } from 'lucide-vue-next'
 import { useThemeStore } from '@/stores/theme'
 import { useUIStore } from '@/stores/ui'
+import { useWebhookStore } from '@/stores/webhook'
 
 const props = withDefaults(defineProps<{
   asSub?: boolean
@@ -14,9 +15,11 @@ const { asSub } = toRefs(props)
 
 const uiStore = useUIStore()
 const themeStore = useThemeStore()
+const webhookStore = useWebhookStore()
 
 const { isDark, isEditOnLeft, isShowCssEditor, isOpenRightSlider } = storeToRefs(uiStore)
 const { previewWidth } = storeToRefs(themeStore)
+const { isListening, statusText, statusColor, canStartListening, canStopListening } = storeToRefs(webhookStore)
 
 // Get mobile and desktop width values
 const mobileWidth = widthOptions[0].value
@@ -113,6 +116,41 @@ function setPreviewMode(width: string) {
 
       <MenubarSeparator />
 
+      <!-- Webhook 监听 -->
+      <MenubarItem @click="webhookStore.toggleListening" :disabled="webhookStore.serverStatus === 'starting'">
+        <component
+          :is="isListening ? Wifi : WifiOff"
+          :class="`${statusColor} mr-2 h-4 w-4`"
+        />
+        监听 Webhook
+      </MenubarItem>
+      <MenubarSub>
+        <MenubarSubTrigger>
+          <component :is="isListening ? Wifi : WifiOff" :class="`${statusColor} mr-2 h-4 w-4`" />
+          Webhook 设置
+        </MenubarSubTrigger>
+        <MenubarSubContent>
+          <MenubarItem @click="webhookStore.testConnection" :disabled="!isListening">
+            测试连接
+          </MenubarItem>
+          <MenubarCheckboxItem :checked="isListening" @click="webhookStore.toggleListening" :disabled="webhookStore.serverStatus === 'starting'">
+            启用监听
+          </MenubarCheckboxItem>
+          <MenubarItem :disabled="true">
+            <span class="text-xs text-muted-foreground">
+              状态: {{ statusText }}
+            </span>
+          </MenubarItem>
+          <MenubarItem :disabled="true">
+            <span class="text-xs text-muted-foreground">
+              端口: {{ webhookStore.serverPort }}
+            </span>
+          </MenubarItem>
+        </MenubarSubContent>
+      </MenubarSub>
+
+      <MenubarSeparator />
+
       <MenubarItem @click="isOpenRightSlider = !isOpenRightSlider">
         <Palette class="mr-2 h-4 w-4" />
         样式面板
@@ -203,6 +241,41 @@ function setPreviewMode(width: string) {
           >
             隐藏
           </MenubarCheckboxItem>
+        </MenubarSubContent>
+      </MenubarSub>
+
+      <MenubarSeparator />
+
+      <!-- Webhook 监听 -->
+      <MenubarItem @click="webhookStore.toggleListening" :disabled="webhookStore.serverStatus === 'starting'">
+        <component
+          :is="isListening ? Wifi : WifiOff"
+          :class="`${statusColor} mr-2 h-4 w-4`"
+        />
+        监听 Webhook
+      </MenubarItem>
+      <MenubarSub>
+        <MenubarSubTrigger>
+          <component :is="isListening ? Wifi : WifiOff" :class="`${statusColor} mr-2 h-4 w-4`" />
+          Webhook 设置
+        </MenubarSubTrigger>
+        <MenubarSubContent>
+          <MenubarItem @click="webhookStore.testConnection" :disabled="!isListening">
+            测试连接
+          </MenubarItem>
+          <MenubarCheckboxItem :checked="isListening" @click="webhookStore.toggleListening" :disabled="webhookStore.serverStatus === 'starting'">
+            启用监听
+          </MenubarCheckboxItem>
+          <MenubarItem :disabled="true">
+            <span class="text-xs text-muted-foreground">
+              状态: {{ statusText }}
+            </span>
+          </MenubarItem>
+          <MenubarItem :disabled="true">
+            <span class="text-xs text-muted-foreground">
+              端口: {{ webhookStore.serverPort }}
+            </span>
+          </MenubarItem>
         </MenubarSubContent>
       </MenubarSub>
 

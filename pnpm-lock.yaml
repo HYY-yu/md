@@ -118,6 +118,12 @@ importers:
       '@ssttevee/multipart-parser':
         specifier: ^0.1.9
         version: 0.1.9
+      '@types/cors':
+        specifier: ^2.8.19
+        version: 2.8.19
+      '@types/express':
+        specifier: ^5.0.5
+        version: 5.0.5
       '@vee-validate/yup':
         specifier: ^4.15.1
         version: 4.15.1(vue@3.5.24(typescript@5.9.3))(yup@1.7.1)
@@ -145,6 +151,9 @@ importers:
       core-js:
         specifier: ^3.47.0
         version: 3.47.0
+      cors:
+        specifier: ^2.8.5
+        version: 2.8.5
       cos-js-sdk-v5:
         specifier: ^1.10.1
         version: 1.10.1
@@ -154,6 +163,9 @@ importers:
       es-toolkit:
         specifier: ^1.42.0
         version: 1.42.0
+      express:
+        specifier: ^5.1.0
+        version: 5.1.0
       front-matter:
         specifier: ^4.0.2
         version: 4.0.2
@@ -2430,8 +2442,17 @@ packages:
   '@textlint/types@15.4.0':
     resolution: {integrity: sha512-ZMwJgw/xjxJufOD+IB7I2Enl9Si4Hxo04B76RwUZ5cKBKzOPcmd6WvGe2F7jqdgmTdGnfMU+Bo/joQrjPNIWqg==}
 
+  '@types/body-parser@1.19.6':
+    resolution: {integrity: sha512-HLFeCYgz89uk22N5Qg3dvGvsv46B8GLvKKo1zKG4NybA8U2DiEO3w9lqGg29t/tfLRJpJ6iQxnVw4OnB7MoM9g==}
+
   '@types/buffer-from@1.1.3':
     resolution: {integrity: sha512-2lq4YC9uLUMGHkl2IDtX4tCXSo2+hwMpOJcY1qiIk1kybc31rIlPyM1HCVJhkPFIo75a/pOVxqyvwuf5TpCG/w==}
+
+  '@types/connect@3.4.38':
+    resolution: {integrity: sha512-K6uROf1LD88uDQqJCktA4yzL1YYAK6NgfsI0v/mTgyPKWsX1CnJ0XPSDhViejru1GcRkLWb8RlzFYJRqGUbaug==}
+
+  '@types/cors@2.8.19':
+    resolution: {integrity: sha512-mFNylyeyqN93lfe/9CSxOGREz8cpzAhH+E93xJ4xWQf62V8sQ/24reV2nyzUWM6H6Xji+GGHpkbLe7pVoUEskg==}
 
   '@types/crypto-js@4.2.2':
     resolution: {integrity: sha512-sDOLlVbHhXpAUAL0YHDUUwDZf3iN4Bwi4W6a0W0b+QcAezUbRtH4FVb+9J4h+XFPW7l/gQ9F8qC7P+Ec4k8QVQ==}
@@ -2541,6 +2562,12 @@ packages:
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
 
+  '@types/express-serve-static-core@5.1.0':
+    resolution: {integrity: sha512-jnHMsrd0Mwa9Cf4IdOzbz543y4XJepXrbia2T4b6+spXC2We3t1y6K44D3mR8XMFSXMCf3/l7rCgddfx7UNVBA==}
+
+  '@types/express@5.0.5':
+    resolution: {integrity: sha512-LuIQOcb6UmnF7C1PCFmEU1u2hmiHL43fgFQX67sN3H4Z+0Yk0Neo++mFsBjhOAuLzvlQeqAAkeDOZrJs9rzumQ==}
+
   '@types/filesystem@0.0.36':
     resolution: {integrity: sha512-vPDXOZuannb9FZdxgHnqSwAG/jvdGM8Wq+6N4D/d80z+D4HWH+bItqsZaVRQykAn6WEVeEkLm2oQigyHtgb0RA==}
 
@@ -2553,6 +2580,9 @@ packages:
   '@types/har-format@1.2.16':
     resolution: {integrity: sha512-fluxdy7ryD3MV6h8pTfTYpy/xQzCFC7m89nOH9y94cNqJ1mDIDPut7MnRHI3F6qRmh/cT2fUjG1MLdCNb4hE9A==}
 
+  '@types/http-errors@2.0.5':
+    resolution: {integrity: sha512-r8Tayk8HJnX0FztbZN7oVqGccWgw98T/0neJphO91KkmOzug1KkofZURD4UaD5uH8AqcFLfdPErnBod0u71/qg==}
+
   '@types/http-proxy@1.17.17':
     resolution: {integrity: sha512-ED6LB+Z1AVylNTu7hdzuBqOgMnvG/ld6wGCG8wFnAzKX5uyW2K3WD52v0gnLCTK/VLpXtKckgWuyScYK6cSPaw==}
 
@@ -2561,6 +2591,9 @@ packages:
 
   '@types/mdast@4.0.4':
     resolution: {integrity: sha512-kGaNbPh1k7AFzgpud/gMdvIm5xuECykRR+JnWKQno9TAXVa6WIVCGTPvYGekIDL4uwCZQSYbUxNBSb1aUo79oA==}
+
+  '@types/mime@1.3.5':
+    resolution: {integrity: sha512-/pyBZWSLD2n0dcHE3hq8s8ZvcETHtEuF+3E7XVt0Ig2nvsVQXdghHVcEkIWjy9A0wKfTn97a/PSDYohKIlnP/w==}
 
   '@types/minimatch@3.0.5':
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
@@ -2574,8 +2607,23 @@ packages:
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
 
+  '@types/qs@6.14.0':
+    resolution: {integrity: sha512-eOunJqu0K1923aExK6y8p6fsihYEn/BYuQ4g0CxAAgFc4b/ZLN4CrsRZ55srTdqoiLzU2B2evC+apEIxprEzkQ==}
+
+  '@types/range-parser@1.2.7':
+    resolution: {integrity: sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==}
+
   '@types/sarif@2.1.7':
     resolution: {integrity: sha512-kRz0VEkJqWLf1LLVN4pT1cg1Z9wAuvI6L97V3m2f5B76Tg8d413ddvLBPTEHAZJlnn4XSvu0FkZtViCQGVyrXQ==}
+
+  '@types/send@0.17.6':
+    resolution: {integrity: sha512-Uqt8rPBE8SY0RK8JB1EzVOIZ32uqy8HwdxCnoCOsYrvnswqmFZ/k+9Ikidlk/ImhsdvBsloHbAlewb2IEBV/Og==}
+
+  '@types/send@1.2.1':
+    resolution: {integrity: sha512-arsCikDvlU99zl1g69TcAB3mzZPpxgw0UQnaHeC1Nwb015xp8bknZv5rIfri9xTOcMuaVgvabfIRA7PSZVuZIQ==}
+
+  '@types/serve-static@1.15.10':
+    resolution: {integrity: sha512-tRs1dB+g8Itk72rlSI2ZrW6vZg0YrLI81iQSTkMmOqnqCaNr/8Ek4VwWcN5vZgCYWbg/JJSGBlUaYGAOP73qBw==}
 
   '@types/trusted-types@2.0.7':
     resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
@@ -3564,6 +3612,10 @@ packages:
 
   core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
+
+  cors@2.8.5:
+    resolution: {integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==}
+    engines: {node: '>= 0.10'}
 
   cos-js-sdk-v5@1.10.1:
     resolution: {integrity: sha512-a4SRfCY5g6Z35C7OWe9te/S1zk77rVQzfpvZ33gmTdJQzKxbNbEG7Aw/v453XwVMsQB352FIf7KRMm5Ya/wlZQ==}
@@ -10354,7 +10406,20 @@ snapshots:
     dependencies:
       '@textlint/ast-node-types': 15.4.0
 
+  '@types/body-parser@1.19.6':
+    dependencies:
+      '@types/connect': 3.4.38
+      '@types/node': 24.10.1
+
   '@types/buffer-from@1.1.3':
+    dependencies:
+      '@types/node': 24.10.1
+
+  '@types/connect@3.4.38':
+    dependencies:
+      '@types/node': 24.10.1
+
+  '@types/cors@2.8.19':
     dependencies:
       '@types/node': 24.10.1
 
@@ -10493,6 +10558,19 @@ snapshots:
 
   '@types/estree@1.0.8': {}
 
+  '@types/express-serve-static-core@5.1.0':
+    dependencies:
+      '@types/node': 24.10.1
+      '@types/qs': 6.14.0
+      '@types/range-parser': 1.2.7
+      '@types/send': 1.2.1
+
+  '@types/express@5.0.5':
+    dependencies:
+      '@types/body-parser': 1.19.6
+      '@types/express-serve-static-core': 5.1.0
+      '@types/serve-static': 1.15.10
+
   '@types/filesystem@0.0.36':
     dependencies:
       '@types/filewriter': 0.0.33
@@ -10502,6 +10580,8 @@ snapshots:
   '@types/geojson@7946.0.16': {}
 
   '@types/har-format@1.2.16': {}
+
+  '@types/http-errors@2.0.5': {}
 
   '@types/http-proxy@1.17.17':
     dependencies:
@@ -10513,6 +10593,8 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
 
+  '@types/mime@1.3.5': {}
+
   '@types/minimatch@3.0.5': {}
 
   '@types/ms@2.1.0': {}
@@ -10523,7 +10605,26 @@ snapshots:
 
   '@types/normalize-package-data@2.4.4': {}
 
+  '@types/qs@6.14.0': {}
+
+  '@types/range-parser@1.2.7': {}
+
   '@types/sarif@2.1.7': {}
+
+  '@types/send@0.17.6':
+    dependencies:
+      '@types/mime': 1.3.5
+      '@types/node': 24.10.1
+
+  '@types/send@1.2.1':
+    dependencies:
+      '@types/node': 24.10.1
+
+  '@types/serve-static@1.15.10':
+    dependencies:
+      '@types/http-errors': 2.0.5
+      '@types/node': 24.10.1
+      '@types/send': 0.17.6
 
   '@types/trusted-types@2.0.7':
     optional: true
@@ -11753,6 +11854,11 @@ snapshots:
   core-js@3.47.0: {}
 
   core-util-is@1.0.3: {}
+
+  cors@2.8.5:
+    dependencies:
+      object-assign: 4.1.1
+      vary: 1.1.2
 
   cos-js-sdk-v5@1.10.1:
     dependencies:

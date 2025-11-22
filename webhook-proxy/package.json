@@ -1,0 +1,23 @@
+{
+  "name": "md-editor-webhook-proxy",
+  "version": "1.0.0",
+  "description": "Webhook proxy server for MD Editor",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "ws": "^8.18.3"
+  },
+  "keywords": [
+    "webhook",
+    "proxy",
+    "markdown",
+    "editor"
+  ],
+  "author": "MD Editor",
+  "license": "MIT"
+}
